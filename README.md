@@ -2,6 +2,8 @@
 Plataforma para gerenciar alunos locais da plataforma EdX
 Questionamentos do Grupo
 
+Questionamentos do Grupo
+
 Josberto Vieira, perguntou:
 Existe algum projeto de gerenciamento de alunos e tarefas escolas para preparação para o colégio militar?
 
@@ -49,7 +51,7 @@ def get_course_info(course_id):
         "end_date": course.end,
     }
 
-# Obtendo informações de um curso com o ID "course-v1:edX+DemoX+Demo_Course"
+ Obtendo informações de um curso com o ID "course-v1:edX+DemoX+Demo_Course"
 course_info = get_course_info("course-v1:edX+DemoX+Demo_Course")
 print("Curso ID:", course_info["course_id"])
 print("Nome do curso:", course_info["course_name"])
@@ -166,18 +168,18 @@ def submit_assignment(assignment_id, answer):
     else:
         print("Erro ao enviar a atividade")
 
-# Cria a janela principal da aplicação
+ Cria a janela principal da aplicação
 root = tk.Tk()
 root.title("OpenEdX Client")
 
-# Cria um menu drop-down com a lista de cursos disponíveis
+ Cria um menu drop-down com a lista de cursos disponíveis
 courses = get_courses()
 course_var = tk.StringVar(root)
 course_var.set("Selecione um curso")
 course_dropdown = tk.OptionMenu(root, course_var, *courses)
 course_dropdown.pack()
 
-# Cria um botão para inscrever-se em um curso
+ Cria um botão para inscrever-se em um curso
 enroll_button = tk.Button(root, text="Inscre
 
 A ideia geral é criar widgets Tkinter, como botões e menus drop-down, e usar os métodos da API da OpenEdX para realizar as ações desejadas.
@@ -203,12 +205,12 @@ python code
 import tkinter as tk
 import requests
 
-# Função para obter a lista de cursos
+Função para obter a lista de cursos
 def get_courses():
-    # Realize uma requisição HTTP GET para a API da OpenEdX
-    # para obter a lista de cursos
+     Realize uma requisição HTTP GET para a API da OpenEdX
+     para obter a lista de cursos
     courses = []
-    # Armazene os cursos retornados na lista courses
+     Armazene os cursos retornados na lista courses
     return courses
 
 Este exemplo mostra como usar o Tkinter para criar uma interface gráfica básica que permite se inscrever em um curso, visualizar materiais de curso e enviar atividades:
@@ -216,43 +218,43 @@ Este exemplo mostra como usar o Tkinter para criar uma interface gráfica básic
 python code
 import tkinter as tk
 
-# Função para se inscrever em um curso
+ Função para se inscrever em um curso
 def enroll_in_course(course):
-    # Aqui você pode colocar o código que utiliza a API da OpenEdX para se inscrever em um curso específico
+Aqui você pode colocar o código que utiliza a API da OpenEdX para se inscrever em um curso específico
     pass
 
-# Função para visualizar materiais de curso
+ Função para visualizar materiais de curso
 def view_course_materials(course):
-    # Aqui você pode colocar o código que utiliza a API da OpenEdX para visualizar materiais de curso específico
+Aqui você pode colocar o código que utiliza a API da OpenEdX para visualizar materiais de curso específico
     pass
 
-# Função para enviar atividades
+Função para enviar atividades
 def submit_activity(course):
-    # Aqui você pode colocar o código que utiliza a API da OpenEdX para enviar atividades de um curso específico
+Aqui você pode colocar o código que utiliza a API da OpenEdX para enviar atividades de um curso específico
     pass
 
-# Cria a janela principal da aplicação
+Cria a janela principal da aplicação
 root = tk.Tk()
 root.title("OpenEdX Course Manager")
 
-# Menu drop-down para seleção do curso
+ Menu drop-down para seleção do curso
 course_var = tk.StringVar()
 course_dropdown = tk.OptionMenu(root, course_var, "Course 1", "Course 2", "Course 3")
 course_dropdown.pack()
 
-# Botão para se inscrever em um curso
+ Botão para se inscrever em um curso
 enroll_button = tk.Button(root, text="Enroll", command=lambda: enroll_in_course(course_var.get()))
 enroll_button.pack()
 
-# Botão para visualizar materiais de curso
+ Botão para visualizar materiais de curso
 view_materials_button = tk.Button(root, text="View Materials", command=lambda: view_course_materials(course_var.get()))
 view_materials_button.pack()
 
-# Botão para enviar atividades
+ Botão para enviar atividades
 submit_activity_button = tk.Button(root, text="Submit Activity", command=lambda: submit_activity(course_var.get()))
 submit_activity_button.pack()
 
-# Inicia a aplicação
+ Inicia a aplicação
 root.mainloop()
 Espero que isso ajude!
 
